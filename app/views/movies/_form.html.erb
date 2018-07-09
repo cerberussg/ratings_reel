@@ -1,0 +1,6 @@
+<%= simple_form_for @movie, defaults: { input_html: { class: 'form-group' } } do |f| %>
+  <%= f.input :title, label: 'Movie Title', class: 'form-control' %>
+  <%= f.input :description, class: 'form-control' %>
+  <%= f.input :director, class: 'form-control' %>
+  <%= f.button :button, class: 'btn-success', name: 'commit' %>
+<% end %>
