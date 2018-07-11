@@ -1,4 +1,6 @@
 <%= simple_form_for @movie, defaults: { input_html: { class: 'form-group' } } do |f| %>
+  <%= select_tag(:category_id, options_for_select(@categories),
+                prompt: 'Select Category') %>
   <%= f.input :title, label: 'Movie Title', class: 'form-control', autofocus: true %>
   <%= f.input :description, class: 'form-control', :input_html => {:rows => 6} %>
   <%= f.input :director, class: 'form-control' %>
